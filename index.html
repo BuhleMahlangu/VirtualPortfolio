@@ -10,6 +10,7 @@
     <header>
         <div class="container">
             <h1>Buhle Mahlangu</h1>
+            <button id="minimize-header" aria-label="Minimize Header">⯈</button>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -40,5 +41,16 @@
     <a href="#" class="back-to-top" id="back-to-top">⬆️ Back to Top</a>
     <script src="scripts/script.js"></script>
     <script src="//code.tidio.co/jsjkcwokcu5p2l9swzg5d2tvkcggllna.js" async></script>
+    <script>
+        const headerTitle = document.getElementById('header-title');
+        const minimizeButton = document.getElementById('minimize-header');
+        const header = document.querySelector('header');
+        
+        minimizeButton.addEventListener('click', () => {
+            header.classList.toggle('minified');
+            headerTitle.style.display = header.classList.contains('minified') ? 'none' : 'block';
+            minimizeButton.textContent = header.classList.contains('minified') ? '⯆' : '⯈'; // Change button icon
+        });
+    </script>
 </body>
 </html>

@@ -25,6 +25,25 @@ header {
     position: sticky; 
     top: 0;
     z-index: 1000;
+    transition: height 0.3s ease; /* Smooth transition for minimizing */
+}
+
+header.minified {
+    height: 50px;
+    padding: 50px 0; /* Height when minimized */
+}
+
+header.minified nav {
+    display: none; /* Hide the navigation when minimized */
+}
+
+#minimize-header {
+    background: transparent; 
+    border: none; 
+    color: #fff; 
+    font-size: 1.2em; 
+    cursor: pointer; 
+    margin-left: 20px; /* Space between button and title */
 }
 
 nav ul {
