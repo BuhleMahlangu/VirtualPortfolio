@@ -1,0 +1,234 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header Styles */
+header {
+    background: #343a40;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9em;
+    padding: 5px 10px; /* Touch-friendly padding */
+}
+
+nav ul li a:hover {
+    color: #ffc107; 
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #007bff, #6f42c1);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: #ffc107;
+    color: #333;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background: #e0a800;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #343a40;
+    color: white;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Image Styling */
+.profile-image {
+    width: 150px;
+    height: auto;
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+    border: 3px solid #ffc107; 
+}
+
+/* About Section */
+.about-me {
+    background: #ffffff; 
+    padding: 40px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    max-width: 800px; 
+    margin: 30px auto; 
+}
+
+.about-me h2 {
+    color: #007bff; 
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff; 
+    padding-bottom: 5px;
+}
+
+.about-me ul {
+    list-style-type: disc; 
+    padding-left: 20px; 
+}
+
+.about-me ul li {
+    margin: 10px 0; 
+}
+
+/* Projects Section */
+.projects-section {
+    background: #ffffff; 
+    padding: 40px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    max-width: 800px; 
+    margin: 30px auto; 
+}
+
+.projects-section h2 {
+    color: #007bff; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-item {
+    margin-bottom: 30px; 
+    padding: 20px; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 5px; 
+}
+
+.project-item h3 {
+    color: #343a40; 
+}
+
+.project-item p {
+    margin: 10px 0; 
+}
+
+.project-item ul {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+.project-item ul li {
+    font-weight: bold; 
+    margin: 5px 0; 
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; 
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+    }
+    nav ul li {
+        margin: 10px 0; /* Additional spacing */
+    }
+    .hero {
+        padding: 50px 10px; /* Adjust hero padding */
+    }
+    .hero h2 {
+        font-size: 2em; /* Adjust font size */
+    }
+    .hero p {
+        font-size: 1em; /* Adjust font size */
+    }
+    .about-me, .projects-section {
+        padding: 20px; /* Adjust padding for mobile */
+    }
+    .profile-image {
+        width: 100px; /* Adjust image size */
+    }
+    .cta-button, .back-to-top {
+        padding: 12px 20px; /* Maintain touch-friendly sizes */
+        font-size: 1em; /* Ensure font size is readable */
+    }
+}
